@@ -30,10 +30,10 @@
                     <ListView.ItemTemplate>
                         <DataTemplate  x:DataType="local:Exercise" >
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="{Binding Name}" FontSize="20" TextWrapping="Wrap" TextAlignment="Left"  HorizontalAlignment="Left" Width="250" Grid.Column="1"/>
+                                <TextBlock Text="{Binding Name}" FontSize="20" TextWrapping="Wrap" TextAlignment="Left"  HorizontalAlignment="Left" Width="220" Grid.Column="1"/>
                                 <TextBlock Text="{Binding Weight}" FontSize="20" Width="30" TextAlignment="Right" Grid.Column="2"/>
                                 <TextBlock Text=" кг * " FontSize="20" Grid.Column="3"/>
-                                <TextBlock Text="{Binding Iteration}" Width="20" FontSize="20" Grid.Column="3" TextAlignment="Right" />
+                                <TextBlock Text="{Binding Iteration}" Width="30" FontSize="20" Grid.Column="3" TextAlignment="Right" />
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
