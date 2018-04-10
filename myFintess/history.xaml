@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="myFintess.history"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:myFintess"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="headerBlock" Text = "История" Margin="10" FontSize="30"
+                       Style="{ThemeResource HeaderTextBlockStyle}" />
+        
+        <CalendarView x:Name="calendar" HorizontalAlignment="Stretch"
+                      Margin="10" 
+                      Height="250"
+                     
+                      MonthYearItemFontSize="20"
+                      DayItemFontSize="10"
+                      VerticalAlignment="Top"
+                      SelectionMode="Single" 
+                      CalendarViewDayItemChanging="calendar_CalendarViewDayItemChanging" 
+                      FirstDayOfWeek="Monday"
+                      SelectedDatesChanged="calendar_SelectedDatesChanged"/>
+       
+            <!--список -->
+        <ScrollViewer x:Name="scroll" VerticalScrollBarVisibility="Visible" Height="230">
+            <ListView x:Name="List"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="local:Training" >
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                            <TextBlock Text="{Binding ex.Name}" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" HorizontalAlignment="Left" Width="200"/>
+                            <TextBlock Text="{Binding Weight}" FontSize="20" TextAlignment="Right" Width="45" Margin="10,0" HorizontalAlignment="Right" />
+                            <TextBlock Text="кг * " FontSize="20" />
+                            <TextBlock Text="{Binding Iteration}" FontSize="20" TextAlignment="Center" Width="30" Margin="0,0" HorizontalAlignment="Right"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </ScrollViewer>
+
+       
+        
+    </StackPanel>
+   
+</Page>

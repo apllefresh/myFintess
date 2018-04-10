@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="myFintess.congratulations"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:myFintess"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" >
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel>
+            <TextBlock x:Name="headerBlock" Margin="10" FontSize="30" Text = "Новый рекорд!!!"
+                       Style="{ThemeResource HeaderTextBlockStyle}" />
+        <Image Height="400">
+            <Image.Source>
+                <BitmapImage x:Name="GifImage" UriSource="Assets/cong.gif"/>
+            </Image.Source>
+        </Image>
+        <Button x:Name="btnOK" HorizontalAlignment="Center" Content="OK"
+                Click="btnOK_Click" Width="100"/>
+        </StackPanel>
+    </Grid>
+</Page>
